@@ -5,8 +5,16 @@
 Authors:
 
 >**<em>Shitong Shao, Zikai Zhou, Dian Xie, Yuetong Fang, Tian Ye, Lichen Bai</em> and <em>Zeke Xie*</em>** <br>
-> MBZUAI, Polyu and OPPO <br>
+> xLeaf Lab, HKUST (GZ) <br>
 > *: Corresponding author
+
+## New
+
+[x] Release the inference code of SD3.5 and SDXL.
+[ ] Release the inference code of FLUX.
+[ ] Release the inference code of LlamaGen.
+[ ] Release the implementation of the Collect phase.
+[ ] Release the implementation of the Reflect phase.
 
 
 ## Overview
