@@ -1,4 +1,13 @@
-# NPNet Pipeline Usage Guide😄 
+# The Official Implementation of our Arxiv 2025 paper:
+
+> **[CoRe^2: _Collect, Reflect and Refine_ to Generate Better and Faster](https://arxiv.org/abs/2311.17950)** <br>
+
+Authors:
+
+>**<em>Shitong Shao, Zikai Zhou, Dian Xie, Yuetong Fang, Tian Ye, Lichen Bai</em> and <em>Zeke Xie*</em>** <br>
+> MBZUAI, Polyu and OPPO <br>
+> *: Corresponding author
+
 
 ## Overview
 
