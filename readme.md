@@ -1,6 +1,6 @@
 # The Official Implementation of our Arxiv 2025 paper:
 
-> **[CoRe^2: _Collect, Reflect and Refine_ to Generate Better and Faster](https://arxiv.org/abs/2311.17950)** <br>
+> **[CoRe^2: _Collect, Reflect and Refine_ to Generate Better and Faster](https://arxiv.org/abs/2503.09662)** <br>
 
 Authors:
 
@@ -78,4 +78,6 @@ The script will save one image:
 ## Pre-trained Weights Download❤️
 
 We provide the pre-trained CoRe^2 weights of Stable Diffusion XL, and Stable Diffusion 3.5 Large with https://drive.google.com/drive/folders/1alJco6X3cFw4oHTD9SifvS7apc3AwG8I?usp=drive_link
+
+
 
