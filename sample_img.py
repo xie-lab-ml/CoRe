@@ -103,14 +103,14 @@ if __name__ == '__main__':
                   replace_linear_with_lora(refine_model, rank=64, alpha=1.0, number_of_lora=28)
                   lora_true(refine_model, lora_idx=0)
 
-                  checkpoint = torch.load('./weights/sd35_ckpt_v9.pth', map_location='cpu')
+                  checkpoint = torch.load('./weights/sd35_noise_model.pth', map_location='cpu')
                   refine_model.load_state_dict(checkpoint)
             elif args.model == 'sdxl':
                   refine_model = PromptSDXLNet()
                   replace_linear_with_lora(refine_model, rank=48, alpha=1.0, number_of_lora=50)
                   lora_true(refine_model, lora_idx=0)
 
-                  checkpoint = torch.load('./weights/sdxl_ckpt_v9.pth', map_location='cpu')
+                  checkpoint = torch.load('./weights/sdxl_noise_model.pth', map_location='cpu')
                   refine_model.load_state_dict(checkpoint)
 
             print("Load Lora Success")
