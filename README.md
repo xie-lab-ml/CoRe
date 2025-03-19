@@ -1,4 +1,4 @@
----
+<!-- ---
 license: mit
 language:
 - en
@@ -18,7 +18,7 @@ tags:
 - effectiveness
 - generalization
 - weak-to-strong guidance
----
+--- -->
 
 # The Official Implementation of our Arxiv 2025 paper:
 
@@ -31,14 +31,14 @@ Authors:
 > *: Corresponding author
 
 <div align="center">
-  <a href="https://github.com/xie-lab-ml/CoRe2/tree/main"><img src="https://img.shields.io/static/v1?label=HunyuanVideo Code&message=Github&color=blue"></a> &ensp;
-  <a href="https://huggingface.co/papers/2503.09662"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=HF Daily Paper&color=yellow"></a> &ensp;
-  <a href="https://arxiv.org/abs/2503.09662v1"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=Arxiv&color=red"></a>
+  <a href="https://github.com/xie-lab-ml/CoRe2/tree/main"><img src="https://img.shields.io/static/v1?label=CoRe^2 Code&message=Github&color=blue"></a> &ensp;
+  <a href="https://huggingface.co/papers/2503.09662"><img src="https://img.shields.io/static/v1?label=CoRe^2&message=HF Daily Paper&color=yellow"></a> &ensp;
+  <a href="https://arxiv.org/abs/2503.09662v1"><img src="https://img.shields.io/static/v1?label=CoRe^2&message=Arxiv&color=red"></a>
 </div>
 
 <div align="center">
-  <a href="https://huggingface.co/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=HunyuanVideo Code&message=Model Weight&color=yellow"></a> &ensp;
-  <a href="https://huggingface.co/spaces/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=HF Demo&color=yellow"></a>
+  <a href="https://huggingface.co/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=CoRe^2 Code&message=Model Weight&color=yellow"></a> &ensp;
+  <a href="https://huggingface.co/spaces/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=CoRe^2&message=HF Demo&color=yellow"></a>
 </div>
 
 ## New
@@ -104,9 +104,9 @@ The script will save one image.
 
 **SD3.5-CoRe^2**:
 
-[SD3.5-CoRe^2](./sd35_core.png)
+![SD3.5-CoRe^2](./sd35_core.png)
 
 
 **SDXL-CoRe^2**:
 
-[SDXL-CoRe^2](./sdxl_core.png)
+![SDXL-CoRe^2](./sdxl_core.png)
