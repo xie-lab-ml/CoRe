@@ -1,0 +1,17 @@
+diffusers==0.31.0
+transformers==4.46.1
+einops 
+wandb
+accelerate==1.0.1
+pandas
+imageio
+gradio
+sentencepiece
+huggingface_hub
+bitsandbytes
+imageio-ffmpeg
+omegaconf
+spaces
+torch==2.4 --index-url https://download.pytorch.org/whl/cu124
+torchaudio==2.4 --index-url https://download.pytorch.org/whl/cu124
+torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu124

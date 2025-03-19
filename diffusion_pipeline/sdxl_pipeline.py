@@ -3,6 +3,7 @@ import inspect
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 import torch
+import math
 import time
 import torch.nn as nn
 from transformers import (
@@ -1646,7 +1647,8 @@ class StableDiffusionXLPipeline(
                                 added_cond_kwargs=added_cond_kwargs,
                                 return_dict=False,
                             )[0]
-                            lora_true(refine_model, lora_idx=i)
+                            zz = min(max(0, math.floor(50 - (num_inference_steps - i) / num_inference_steps * 50)), 49)
+                            lora_true(refine_model, lora_idx=zz)
                             strong_noise_pred = refine_model(noise_pred.to(_s.dtype), _s[None,...], _v[None,...], _d[None,...], _pooled_prompt_embeds[None,...].to(_s.dtype))
                             noise_pred = noise_pred + w2s_guidance * (strong_noise_pred - noise_pred)
                             
@@ -2519,7 +2521,8 @@ class StableDiffusionXLPipeline(
                         return_dict=False,
                     )[0]
                     noise_pred_uncond, noise_pred_weak = noise_pred.chunk(2)
-                    lora_true(refine_model, lora_idx=i)
+                    zz = min(max(0, math.floor(50 - (num_inference_steps - i) / num_inference_steps * 50)), 49)
+                    lora_true(refine_model, lora_idx=zz)
                     noise_pred_tmp = refine_model(noise_pred_weak.to(_s.dtype), _s[None,...], _v[None,...], _d[None,...], _pooled_prompt_embeds[None,...].to(_s.dtype))
 
 
@@ -2543,7 +2546,8 @@ class StableDiffusionXLPipeline(
                         added_cond_kwargs=added_cond_kwargs,
                         return_dict=False,
                     )[0]
-                    lora_true(refine_model, lora_idx=i)
+                    zz = min(max(0, math.floor(50 - (num_inference_steps - i) / num_inference_steps * 50)), 49)
+                    lora_true(refine_model, lora_idx=zz)
                     noise_pred = refine_model(noise_pred.to(_s.dtype), _s[None,...], _v[None,...], _d[None,...], _pooled_prompt_embeds[None,...].to(_s.dtype))  
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype

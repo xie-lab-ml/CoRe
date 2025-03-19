@@ -22,7 +22,7 @@ tags:
 
 # The Official Implementation of our Arxiv 2025 paper:
 
-> **[CoRe^2: _Collect, Reflect and Refine_ to Generate Better and Faster](https://arxiv.org/abs/2503.09662)** <br>
+> **CoRe^2: _Collect, Reflect and Refine_ to Generate Better and Faster**
 
 Authors:
 
@@ -30,9 +30,22 @@ Authors:
 > xLeaf Lab, HKUST (GZ) <br>
 > *: Corresponding author
 
+<div align="center">
+  <a href="https://github.com/xie-lab-ml/CoRe2/tree/main"><img src="https://img.shields.io/static/v1?label=HunyuanVideo Code&message=Github&color=blue"></a> &ensp;
+  <a href="https://huggingface.co/papers/2503.09662"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=HF Daily Paper&color=yellow"></a> &ensp;
+  <a href="https://arxiv.org/abs/2503.09662v1"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=Arxiv&color=red"></a>
+</div>
+
+<div align="center">
+  <a href="https://huggingface.co/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=HunyuanVideo Code&message=Model Weight&color=yellow"></a> &ensp;
+  <a href="https://huggingface.co/spaces/sst12345/CoRe2"><img src="https://img.shields.io/static/v1?label=HunyuanVideo&message=HF Demo&color=yellow"></a>
+</div>
+
 ## New
 
 - [x] Release the inference code of SD3.5 and SDXL.
+
+- [x] Deploy the huggingface space demo.
 
 - [ ] Release the inference code of FLUX.
 
@@ -49,27 +62,19 @@ This guide provides instructions on how to use the CoRe^2.
 
 Here we provide the inference code which supports different models like ***Stable Diffusion XL, Stable Diffusion 3.5 Large.***
 
-## Requirements
-
-- `python version == 3.8`
-- `pytorch with cuda version`
-- `diffusers`
-- `PIL`
-- `bitsandbytes`
-- `numpy`
-- `timm`
-- `argparse`
-- `einops`
-
-## Installation🚀️
-
-Make sure you have successfully built `python` environment and installed `pytorch` with cuda version. Before running the script, ensure you have all the required packages installed. You can install them using:
+## Installation
 
 ```bash
-pip install diffusers, PIL, numpy, timm, argparse, einops
+pip install -r requirements.txt
 ```
 
-## Usage👀️ 
+## Usage
+
+First, run:
+
+```bash
+huggingface-cli download sst12345/CoRe2 weights/sd35_noise_model.pth weights/sdxl_noise_model.pth --local-dir ./
+```
 
 To use the CoRe^2 pipeline, you need to run the `sample_img.py` script with appropriate command-line arguments. Below are the available options:
 
@@ -93,7 +98,15 @@ python sample_img.py --pipeline sdxl --prompt "A banana on the left of an apple.
 
 This command will generate an image based on the prompt using the Stable Diffusion XL model with an image size of 1024x1024 pixels.
 
-### Output🎉️ 
+### Output
 
 The script will save one image.
 
+**SD3.5-CoRe^2**:
+
+[SD3.5-CoRe^2](./sd35_core.png)
+
+
+**SDXL-CoRe^2**:
+
+[SDXL-CoRe^2](./sdxl_core.png)
